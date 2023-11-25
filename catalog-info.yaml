@@ -12,8 +12,18 @@ metadata:
   #   backstage.io/techdocs-ref: dir:.
 spec:
   type: service
-  owner: guests
+  owner: checkout-team
   lifecycle: experimental
-  system: examples
+  system: bills
   dependsOn:
     - "resource:reddis"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-db
+  description: Stores artist details
+spec:
+  type: database
+  owner: checkout-team
+  system: bills
