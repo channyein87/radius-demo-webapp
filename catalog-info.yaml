@@ -16,7 +16,7 @@ spec:
   lifecycle: experimental
   system: bills
   dependsOn:
-    - "resource:reddis"
+    - "resource:redis-db"
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
