@@ -9,8 +9,8 @@ metadata:
   #   backstage.io/techdocs-ref: dir:.
 spec:
   type: service
-  owner: john@example.com
+  owner: guests
   lifecycle: experimental
-  system: radius-demo
+  system: examples
   dependsOn:
     - "resource:reddis"
