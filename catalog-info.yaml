@@ -1,29 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: radius-demo-webapp
-  description: An example of a Backstage application.
-  annotations:
-    backstage.io/kubernetes-id: radius-demo-webapp
-    github.com/project-slug: channyein87/radius-demo-webapp
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: checkout-s3
+  annotations: {}
 spec:
-  type: service
-  owner: checkout-team
-  lifecycle: experimental
-  system: bills
-  dependsOn:
-    - "resource:redis-db"
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: redis-db
-  description: Stores artist details
-spec:
-  type: database
-  owner: checkout-team
-  system: bills
+  type: s3-bucket
+  owner: group:default/checkout-team
